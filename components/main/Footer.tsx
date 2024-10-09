@@ -2,12 +2,9 @@ import React from "react";
 import {
   RxDiscordLogo,
   RxGithubLogo,
-  RxInstagramLogo,
-  RxTwitterLogo,
-  RxLinkedinLogo,
 } from "react-icons/rx";
 
-import { FaInstagram, FaLinkedin, FaTwitter, FaYoutube } from "react-icons/fa";
+import { FaYoutube } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -22,11 +19,9 @@ const Footer = () => {
                         <FaYoutube />
                         <span className="text-[15px] ml-[6px]">Youtube</span>    
                     </p>
-                    <p>
-                        <a href="https://github.com/gireesh34" target="_blank" rel="noopener noreferrer" className="flex flex-row items-center my-[15px] cursor-pointer">
+                    <p className="flex flex-row items-center my-[15px] cursor-pointer">
                         <RxGithubLogo />
                         <span className="text-[15px] ml-[6px]">Github</span>    
-                        </a>
                     </p>
                     <p className="flex flex-row items-center my-[15px] cursor-pointer">
                         <RxDiscordLogo />
@@ -36,18 +31,17 @@ const Footer = () => {
                 <div className="min-w-[200px] h-auto flex flex-col items-center justify-start">
                     <div className="font-bold text-[16px]">Social Media</div>
                     <p className="flex flex-row items-center my-[15px] cursor-pointer">
-                        <FaInstagram />
+                        <FaYoutube />
                         <span className="text-[15px] ml-[6px]">Instagram</span>    
                     </p>
                     <p className="flex flex-row items-center my-[15px] cursor-pointer">
-                        <FaTwitter />
+                        <RxGithubLogo />
                         <span className="text-[15px] ml-[6px]">Twitter</span>    
                     </p>
                     <p className="flex flex-row items-center my-[15px] cursor-pointer">
-                        <RxLinkedinLogo />
-                        <a href="https://www.linkedin.com/in/gireesh-bogisetti" target="_blank" rel="noopener noreferrer" className="text-[15px] ml-[6px]">Linkedin</a>   
+                        <RxDiscordLogo />
+                        <span className="text-[15px] ml-[6px]">Linkedin</span>    
                     </p>
-                    
                 </div>
                 <div className="min-w-[200px] h-auto flex flex-col items-center justify-start">
                     <div className="font-bold text-[16px]">About</div>
@@ -60,7 +54,8 @@ const Footer = () => {
                         <span className="text-[15px] ml-[6px]">Learning about me</span>    
                     </p>
                     <p className="flex flex-row items-center my-[15px] cursor-pointer">
-                        <a href="mailto:gireeshbogisetti123@gmail.com" className="text-[15px] ml-[6px]">gireeshbogisetti123@gmail.com</a>
+                  
+                        <span className="text-[15px] ml-[6px]">gireeshbogisetti123@gmail.com</span>    
                     </p>
                 </div>
             </div>
