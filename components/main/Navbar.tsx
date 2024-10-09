@@ -1,5 +1,5 @@
 import { Socials } from "@/constants";
-import Image from "next/image";
+import Image from "@/public";
 import React from "react";
 
 const Navbar = () => {
