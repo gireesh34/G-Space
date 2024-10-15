@@ -12,7 +12,7 @@ const Projects = () => {
       </h1>
       <div className="h-full w-full flex flex-col md:flex-row gap-10 px-10">
         <ProjectCard
-          src="/Solar.png"
+          src="/solar.jpg"
           title="Solar Marketplace"
           description="Solar Marketplace is aWeb-based platform that allows users to search, compare, and purchase solar panels, accessories, and services from various providers, offering a seamless and efficient solution for transitioning to renewable energy.
 
