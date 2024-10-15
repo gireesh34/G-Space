@@ -27,9 +27,10 @@ const Exp: React.FC = () => {
                 <p className="mx-60 mt-5">
                     Gained hands-on experience in front-end and back-end development, as well as database management.
                 </p>
-                <p className="mx-60 mt-10"><strong>Duration:</strong> Sep 2021 - Nov 2021</p>
+                <p className="mx-60 mt-5">
+                    <strong>Duration:</strong> Sep 2021 - Nov 2021
+                </p>
             </section>
-            
 
             <section className="py-10">
                 <h2 className="text-3xl text-center font-bold mt-10">Automated Face Recognition Attendance System</h2>
@@ -38,7 +39,7 @@ const Exp: React.FC = () => {
                     Designed and developed a face recognition-based attendance system using Python and OpenCV, focusing on real-time image processing and machine learning algorithms to enhance recognition accuracy.
                 </p>
                 <p className="mx-60 mt-5">
-                    Implemented machine learning techniques to improve the model's accuracy and efficiency in recognizing faces under varying lighting and environmental conditions.
+                    Implemented machine learning techniques to improve the model&apos;s accuracy and efficiency in recognizing faces under varying lighting and environmental conditions.
                 </p>
                 <p className="mx-60 mt-5">
                     Integrated a user-friendly interface for seamless interaction and data retrieval, allowing easy attendance tracking and management.
@@ -52,7 +53,9 @@ const Exp: React.FC = () => {
                 <p className="mx-60 mt-5">
                     Worked on improving the accuracy of facial recognition by fine-tuning algorithms and optimizing the training data set.
                 </p>
-                <p className="mx-60 mt-10"><strong>Duration:</strong> Feb 2022 - May 2022</p>
+                <p className="mx-60 mt-5">
+                    <strong>Duration:</strong> Feb 2022 - May 2022
+                </p>
             </section>
 
             <section className="py-10">
@@ -79,7 +82,9 @@ const Exp: React.FC = () => {
                 <p className="mx-60 mt-5">
                     This project demonstrated the efficiency of CNNs in adaptive image processing, creating a scalable and secure platform for medical diagnosis powered by deep learning.
                 </p>
-                <p className="mx-60 mt-10"><strong>Duration:</strong> Dec 2022 - April 2023</p>
+                <p className="mx-60 mt-5">
+                    <strong>Duration:</strong> Dec 2022 - April 2023
+                </p>
             </section>
 
             <section className="py-10">
@@ -103,11 +108,12 @@ const Exp: React.FC = () => {
                 <p className="mx-60 mt-5">
                     Optimized website performance and ensured cross-browser compatibility.
                 </p>
-                <p className="mx-60 mt-10"><strong>Duration:</strong> Dec 2022 - April 2023</p>
+                <p className="mx-60 mt-5">
+                    <strong>Duration:</strong> Dec 2022 - April 2023
+                </p>
             </section>
         </div>
     );
 };
+
 export default Exp;
-
-
