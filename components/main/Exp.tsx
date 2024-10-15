@@ -2,7 +2,9 @@ import React from 'react';
 
 const Exp: React.FC = () => {
     return (
-        <div className="text-white ">
+        <div className="text-white "
+          id="exp"
+        >
             <header className="text-[50px] text-center font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 py-20">
                 <h1>Experience</h1>
             </header>
