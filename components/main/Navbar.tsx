@@ -1,58 +1,81 @@
-import { Socials } from "@/constants";
+"use client";
+
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { styles } from "@/components/main/styles";
+import logo from "/public/logo.png";
+import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 const Navbar = () => {
+  const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const currentActive = pathname === '/SkillsPage' ? 'Skills' : pathname === '/ExperiencePage' ? 'Experience' : pathname === '/ProjectsPage' ? 'Projects' : '';
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      if (scrollTop > 100) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <div className="w-full h-[65px] fixed top-0 shadow-lg shadow-[#2A0E61]/50 bg-[#03001417] backdrop-blur-md z-50 px-10">
-      <div className="w-full h-full flex flex-row items-center justify-between m-auto px-[10px]">
-        <a
-          href="#about-me"
-          className="h-auto w-auto flex flex-row items-center"
+    <nav
+      className={`${
+        styles.paddingX
+      } w-full flex items-center py-5 fixed top-0 z-20 ${
+        scrolled ? "bg-primary" : "bg-transparent"
+      }`}
+    >
+      <div className='w-full flex justify-between items-center max-w-7xl mx-auto'>
+        <Link
+          href='/'
+          className='flex items-center gap-2'
+          onClick={() => {
+            window.scrollTo(0, 0);
+          }}
         >
-          <Image
-            src="/logo.png"
-            alt="logo"
-            width={50}
-            height={50}
-            className="cursor-pointer hover:animate-slowspin"
-          />
-
-          <span className="font-bold ml-[10px] hidden md:block text-gray-300">
-            GIREESH PORTFOLIO
-          </span>
-        </a>
-
-        <div className="w-[500px] h-full flex flex-row items-center justify-between md:mr-20">
-          <div className="flex items-center justify-between w-full h-auto border border-[#7042f861] bg-[#0300145e] mr-[15px] px-[20px] py-[10px] rounded-full text-gray-200">
-            <a href="#about-me" className="cursor-pointer">
-              About
-            </a>
-            <a href="#skills" className="cursor-pointer">
-              Skills
-            </a>
-            <a href="#exp" className="cursor-pointer">
-              Experience
-            </a>
-            <a href="#projects" className="cursor-pointer">
-              Projects
-            </a>
+          <Image src={logo} alt='logo' className='w-9 h-9 object-contain '/>
+          <p className='text-white text-[18px] font-bold cursor-pointer flex sm:block hidden'>
+            Gireesh Bogisetti &nbsp;
+          <span className='sm:block hidden'> | Web Development</span>
+          </p>
+        </Link>
+        
+        <div className='flex flex-1 justify-end items-center'>
+          <div className='hidden sm:flex gap-8'></div>
+          <div className='relative'>
+            <button
+              type='button'
+              className='text-white text-[18px] font-medium cursor-pointer'
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+            >
+              Menu
+            </button>
+            {isMenuOpen && (
+              <div className='absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1'>
+                <Link
+                  href="/ExperiencePage"
+                  className='block px-4 py-2 text-gray-800 hover:bg-black-100'
+                >
+                  Experience
+                </Link>
+              </div>
+            )}
           </div>
         </div>
-
-        <div className="flex flex-row gap-5">
-          {Socials.map((social) => (
-            <Image
-              src={social.src}
-              alt={social.name}
-              key={social.name}
-              width={24}
-              height={24}
-            />
-          ))}
-        </div>
+          
       </div>
-    </div>
+    </nav>
   );
 };
 
