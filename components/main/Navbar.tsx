@@ -4,12 +4,11 @@ import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import { styles } from "@/components/main/styles";
 import logo from "/public/logo.png";
-import { usePathname } from "next/navigation";
+
 import Link from "next/link";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
-  const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   
   useEffect(() => {
