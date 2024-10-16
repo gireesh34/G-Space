@@ -11,8 +11,7 @@ const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const currentActive = pathname === '/SkillsPage' ? 'Skills' : pathname === '/ExperiencePage' ? 'Experience' : pathname === '/ProjectsPage' ? 'Projects' : '';
-
+  
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
