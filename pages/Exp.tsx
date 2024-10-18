@@ -41,7 +41,7 @@ const Exp: React.FC = () => {
                         Designed and developed a face recognition-based attendance system using Python and OpenCV, focusing on real-time image processing and machine learning algorithms to enhance recognition accuracy.
                     </p>
                     <p className={styles.paragraph}>
-                        Implemented machine learning techniques to improve the model's accuracy and efficiency in recognizing faces under varying lighting and environmental conditions.
+                        Implemented machine learning techniques to improve the models accuracy and efficiency in recognizing faces under varying lighting and environmental conditions.
                     </p>
                     <p className={styles.paragraph}>
                         Integrated a user-friendly interface for seamless interaction and data retrieval, allowing easy attendance tracking and management.
