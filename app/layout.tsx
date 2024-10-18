@@ -23,10 +23,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <meta name="viewport" content="width=1024" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
       <body
-        className={`${inter.className} bg-[#030014] overflow-y-scroll overflow-x-hidden`}>
+        className={`${inter.className} overflow-y-scroll overflow-x-hidden bgprimary`}>
         <StarsCanvas />
         <Navbar />
           {children}
